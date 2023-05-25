@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Flask App - Formulario</title>
+    <style>
+        /* Styles for the form */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        form {
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="static/tweeter_imagen.jpg" alt="Logo">
+    </div>
+    <h1>Ingrese nombre de usuario para analizar:</h1>
+    <form method="POST" action="/procesar_formulario">
+        <input type="text" name="username">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
+
+
+

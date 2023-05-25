@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultados de la búsqueda de Twitter</title>
+    <style>
+        /* Styles for the page */
+        header {
+            background-color: #1da1f2;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            margin: auto;
+            max-width: 100%;
+        }
+
+        div.graph {
+            margin: 30px auto;
+            max-width: 600px;
+        }
+
+        p.tweet {
+            background-color: #f5f8fa;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Resultados de la búsqueda de Twitter</h1>
+    </header>
+
+    <!-- Profile image section -->
+    <h2>Imagen de perfil</h2>
+    <img src="{{ user_image }}" alt="Imagen de perfil de Twitter" width="100">
+
+    <!-- Top tweets section -->
+    <h2>Tweets destacados</h2>
+    <h3>Tweet con más likes</h3>
+    <p class="tweet">{{ top_likes }}</p>
+    <h3>Tweet con más retweets</h3>
+    <p class="tweet">{{ top_rt }}</p>
+
+    <!-- Tweet count by hour section -->
+    <h2>Cantidad de tweets por hora</h2>
+    <div class="graph">
+        <img src="{{ graph1_image }}" alt="Graph 1">
+    </div>
+
+    <!-- Tweet count by day of the week section -->
+    <h2>Cantidad de tweets por día de la semana</h2>
+    <div class="graph">
+        <img src="{{ graph2_image }}" alt="Graph 2">
+    </div>
+</body>
+</html>
